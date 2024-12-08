@@ -18,6 +18,7 @@
             background-color: #ff6600;
             color: white;
             padding: 20px;
+            border-bottom: 4px solid #cc5200;
         }
         header img {
             max-width: 150px;
@@ -29,43 +30,100 @@
         }
         h1 {
             margin: 0;
-            font-size: 1.8em;
+            font-size: 2em;
         }
         p {
             font-size: 1.2em;
-            color: #fff;
         }
         .buttons {
             margin-top: 30px;
             text-align: center;
         }
-        .download-button {
+        .download-button,
+        .whatsapp-button {
             display: inline-block;
-            margin: 20px;
+            margin: 15px;
             padding: 15px 30px;
-            background-color: #ff6600;
-            color: white;
             text-decoration: none;
             font-size: 1.2em;
             border-radius: 5px;
             transition: background-color 0.3s;
+        }
+        .download-button {
+            background-color: #ff6600;
+            color: white;
         }
         .download-button:hover {
             background-color: #cc5200;
         }
         .whatsapp-button {
-            margin-top: 20px;
-            display: inline-block;
-            padding: 15px 30px;
             background-color: #25d366;
             color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-            transition: background-color 0.3s;
         }
         .whatsapp-button:hover {
             background-color: #1caa51;
+        }
+        .plans-section {
+            padding: 50px 20px;
+            background-color: #111;
+            text-align: center;
+        }
+        .plans-section h2 {
+            color: #ff6600;
+            margin-bottom: 30px;
+        }
+        .plans-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .plan {
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        .plan .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #000;
+            color: #fff;
+            font-size: 0.8em;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .plan h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .plan h4 {
+            font-size: 2em;
+            margin: 15px 0;
+        }
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        .plan ul li {
+            margin: 10px 0;
+        }
+        .plan a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .plan a:hover {
+            background-color: #333;
         }
         .support-section {
             margin-top: 50px;
@@ -86,6 +144,52 @@
             color: white;
             text-align: center;
         }
+
+        /* Planes de usuario */
+        .plan-user-1 {
+            background-color: #ff6f61; /* Rojo */
+        }
+        .plan-user-2 {
+            background-color: #ff9966; /* Naranja claro */
+        }
+        .plan-user-3 {
+            background-color: #66cc99; /* Verde */
+        }
+        .plan-user-4 {
+            background-color: #6699cc; /* Azul */
+        }
+
+        /* Planes de distribuidor */
+        .plan-distributor-1 {
+            background-color: #6a1b9a; /* Púrpura */
+        }
+        .plan-distributor-2 {
+            background-color: #8e24aa; /* Púrpura claro */
+        }
+        .plan-distributor-3 {
+            background-color: #d32f2f; /* Rojo */
+        }
+        .plan-distributor-4 {
+            background-color: #0288d1; /* Azul */
+        }
+        .plan-distributor-5 {
+            background-color: #388e3c; /* Verde */
+        }
+        .plan-distributor-6 {
+            background-color: #f57c00; /* Naranja */
+        }
+        .plan-distributor-7 {
+            background-color: #0288d1; /* Azul */
+        }
+        .plan-distributor-8 {
+            background-color: #8bc34a; /* Verde claro */
+        }
+        .plan-distributor-9 {
+            background-color: #f44336; /* Rojo claro */
+        }
+        .plan-distributor-10 {
+            background-color: #ff9800; /* Naranja oscuro */
+        }
     </style>
 </head>
 <body>
@@ -93,8 +197,8 @@
         <img src="https://imgur.com/a/R5bTQFF" alt="FlujoTV">
         <div>
             <h1>Bienvenido a FlujoTV</h1>
-            <p>Bienvendo a la nueva generación. Flujo TV es una aplicación de entretenimiento con multiples opciones para disfrutar del mejor contenido en línea del mercado</p>
-            <p>Flujo TV brinda un servicio estable y de calidad para toda la familia</p>
+            <p>Bienvenido a la nueva generación. Flujo TV es una aplicación de entretenimiento con múltiples opciones para disfrutar del mejor contenido en línea del mercado.</p>
+            <p>Flujo TV brinda un servicio estable y de calidad para toda la familia.</p>
         </div>
     </header>
 
@@ -104,27 +208,134 @@
         <a href="https://wa.me/+595973158770" class="whatsapp-button">Soporte por WhatsApp</a>
     </div>
 
+    <div class="plans-section">
+        <h2>Planes para Usuarios</h2>
+        <div class="plans-container">
+            <div class="plan plan-user-1">
+                <h3>Plan 1 Mes</h3>
+                <h4>$9</h4>
+                <ul>
+                    <li>+1,000 Canales en vivo</li>
+                    <li>+5,000 Películas y series</li>
+                    <li>3 PANTALLAS simultáneas</li>
+                </ul>
+                <a href="#">Adquirir</a>
+            </div>
+            <div class="plan plan-user-2">
+                <h3>Plan 3 Meses</h3>
+                <h4>$27</h4>
+                <ul>
+                    <li>+1,000 Canales en vivo</li>
+                    <li>+5,000 Películas y series</li>
+                    <li>3 PANTALLAS simultáneas</li>
+                </ul>
+                <a href="#">Adquirir</a>
+            </div>
+            <div class="plan plan-user-3">
+                <div class="badge">+1 MES GRATIS</div>
+                <h3>Plan 6 Meses</h3>
+                <h4>$49</h4>
+                <ul>
+                    <li>+1,000 Canales en vivo</li>
+                    <li>+5,000 Películas y series</li>
+                    <li>3 PANTALLAS simultáneas</li>
+                </ul>
+                <a href="#">Adquirir</a>
+            </div>
+            <div class="plan plan-user-4">
+                <div class="badge">+2 MESES GRATIS</div>
+                <h3>Plan 1 Año</h3>
+                <h4>$87</h4>
+                <ul>
+                    <li>+1,000 Canales en vivo</li>
+                    <li>+5,000 Películas y series</li>
+                    <li>3 PANTALLAS simultáneas</li>
+                </ul>
+                <a href="#">Adquirir</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="plans-section">
+        <h2>Planes para Distribuidores</h2>
+        <div class="plans-container">
+            <div class="plan plan-distributor-1">
+                <h3>15 Créditos</h3>
+                <h4>$67</h4>
+                <ul>
+                    <li>Créditos sin fecha de vencimiento</li>
+                    <li>3 conexiones por crédito</li>
+                </ul>
+                <a href="#">Adquirir</a>
+            </div>
+            <div class="plan plan-distributor-2">
+                <h3>30 Créditos</h3>
+                <h4>$120</h4>
+                <ul>
+                    <li>Créditos sin fecha de vencimiento</li>
+                    <li>3 conexiones por crédito</li>
+                </ul>
+                <a href="#">Adquirir</a>
+            </div>
+            <div class="plan plan-distributor-3">
+                <h3>50 Créditos</h3>
+                <h4>$185</h4>
+                <ul>
+                    <li>Créditos sin fecha de vencimiento</li>
+                    <li>3 conexiones por crédito</li>
+                </ul>
+                <a href="#">Adquirir</a>
+            </div>
+            <div class="plan plan-distributor-4">
+                <h3>100 Créditos</h3>
+                <h4>$325</h4>
+                <ul>
+                    <li>Créditos sin fecha de vencimiento</li>
+                    <li>3 conexiones por crédito</li>
+                </ul>
+                <a href="#">Adquirir</a>
+            </div>
+            <div class="plan plan-distributor-5">
+                <h3>300 Créditos</h3>
+                <h4>$890</h4>
+                <ul>
+                    <li>Créditos sin fecha de vencimiento</li>
+                    <li>3 conexiones por crédito</li>
+                </ul>
+                <a href="#">Adquirir</a>
+            </div>
+            <div class="plan plan-distributor-6">
+                <h3>500 Créditos</h3>
+                <h4>$1200</h4>
+                <ul>
+                    <li>Créditos sin fecha de vencimiento</li>
+                    <li>3 conexiones por crédito</li>
+                </ul>
+                <a href="#">Adquirir</a>
+            </div>
+            <div class="plan plan-distributor-7">
+                <h3>1000 Créditos</h3>
+                <h4>$2250</h4>
+                <ul>
+                    <li>Créditos sin fecha de vencimiento</li>
+                    <li>3 conexiones por crédito</li>
+                </ul>
+                <a href="#">Adquirir</a>
+            </div>
+        </div>
+    </div>
+
     <div class="support-section">
-        <h2>Soporte e Instalación</h2>
-        <p><strong>Para Android:</strong></p>
+        <h2>Preguntas Frecuentes</h2>
         <ol>
-            <li>Descarga el archivo APK desde el botón correspondiente.</li>
-            <li>Abre el archivo APK en tu dispositivo Android.</li>
-            <li>Si es necesario, habilita la instalación desde fuentes desconocidas (Ajustes > Seguridad > Fuentes desconocidas).</li>
-            <li>Completa la instalación y abre la aplicación.</li>
+            <li><strong>¿Cuántas pantallas puedo usar al mismo tiempo?</strong> Puedes usar hasta 3 pantallas de manera simultánea.</li>
+            <li><strong>¿Puedo usar mi cuenta en más de un dispositivo?</strong> Sí, puedes usar tu cuenta en hasta tres dispositivos simultáneamente.</li>
+            <li><strong>¿Los créditos tienen fecha de vencimiento?</strong> No, los créditos no tienen fecha de vencimiento.</li>
         </ol>
-        <p><strong>Para TVBox, SmartTV o Fire TV:</strong></p>
-        <ol>
-            <li>Descarga el archivo APK desde el botón correspondiente.</li>
-            <li>Copia el archivo APK a un dispositivo USB.</li>
-            <li>Conecta el USB a tu TVBox, SmartTV o Fire TV.</li>
-            <li>Usa un administrador de archivos para instalar el archivo APK.</li>
-        </ol>
-        <p>Si tienes dudas, contáctanos por WhatsApp.</p>
     </div>
 
     <footer>
-        <p>&copy; 2024 FlujoTV. Todos los derechos reservados.</p>
+        <p>© 2024 FlujoTV. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
